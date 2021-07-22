@@ -8,6 +8,10 @@
 
 ## Tasks
 
+### Visualization review
+
+- [ ] Complete a review of 2-3 different data visualizations used to answer specific questions. Some fun websites are [pudding.cool](https://pudding.cool/), wonkblog, [fivethiryeight](https://fivethirtyeight.com/), and [priceonomics](https://priceonomics.com/) (but you can use any website, blog, or article with a good visualization).
+
 ### Slack, VScode, Rstudio, Git, and Github
 
 - [ ] Make sure you are in our Slack workspace.
@@ -34,6 +38,11 @@
 
 
 ## Readings
+
+### Visualization (being)
+
+- [John Rauser on visualization](https://youtu.be/fSgEeI2Xpdc)
+- [Effectively Communicating Numbers](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf)
 
 ### Technology
 
