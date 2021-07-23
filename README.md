@@ -1,6 +1,6 @@
 # Data science and visualization
 
-> If 80% of data science work is data wrangling, 80% of your impact will be through visualization. 
+> If 80% of data science work is data wrangling, 80% of your impact is through visualization. 
 
 ## Background
 
