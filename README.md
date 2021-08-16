@@ -34,7 +34,7 @@
 - [ ] Recreate the two graphics in this repo using the gapminder dataset from `library(gapminder)` (get them to match as closely as you can).
     - [ ] Export the data from R and import it into your Python environment. 
     - [ ] Use [plotnine](https://plotnine.readthedocs.io/en/stable/) or [Altair](https://altair-viz.github.io/index.html) to mimic the two graphics as close as possible.
-    [ ] Build a weighted average data set using GDP, the black continent average line on the second plot.
+    - [ ] Build a weighted average data set using GDP, the black continent average line on the second plot.
 
 
 ## Readings
