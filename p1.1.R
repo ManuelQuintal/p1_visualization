@@ -13,11 +13,11 @@ library(ggthemes)
 head(gapminder)
 httpgd::hgd()
 httpgd::hgd_browse()
+
+#1st plot
 plot1 <- gapminder::gapminder %>%
     filter(country != "Kuwait")
 
-
-#1st plot
 plot1 %>%
     ggplot(aes(x=lifeExp, y=gdpPercap, color= continent, size = pop / 100000))+
     geom_point() +
@@ -29,7 +29,7 @@ plot1 %>%
 
 ggsave(file= "i1_Quintal_R.png", width = 15)
 
-#2nd plot
+#2nd plot weighted mean
 plot2 <- gapminder::gapminder %>%
     filter(country != "Kuwait")
 (plot2_cont <-plot2 %>%
@@ -41,14 +41,27 @@ plot2 <- gapminder::gapminder %>%
     ungroup() %>%
     arrange(continent, year))
 
+#2nd plot
 plot2 %>% 
     ggplot(aes(x=year, y=gdpPercap, color = continent)) +
-    geom_point(aes(size = sum(pop)/100000)) +
+    geom_point(aes(size = pop / 1000000, color = continent)) +
     geom_line(aes(group = country)) + 
     geom_point(data = plot2_cont ,aes(size = pop / 100000), color = "black") +
     geom_line(data = plot2_cont, color= "black") +
     facet_grid(. ~ continent) +
     labs(size = "Population (100k)", color = "continent", x= "Year", y= "GDP per capita", ) +
+    scale_size_continuous(trans = "sqrt") +
+    facet_wrap(~continent, nrow = 1) +
     theme_bw()
 
+ggsave(file= "i2_Quintal_R.png", width = 15)
 
+# Exporting gapminder dataset
+
+library(tidyverse)
+readr::write_csv(gapminder, "gapminder.csv")
+
+
+# With feather
+library(feather)
+feather::write_feather(gapminder, "gapminder.feather")
